@@ -1,0 +1,205 @@
+body, html {
+  padding: 0;
+  margin: 0; }
+  body .first-section, html .first-section {
+    background: url("../Bloom/backGround.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .first-section .logo, html .first-section .logo {
+      position: absolute;
+      background: url("../Bloom/128/logoYellow.png") no-repeat center center;
+      background-size: cover;
+      top: 8vh;
+      left: 8vw;
+      width: 5vw;
+      height: 11.5vh; }
+    body .first-section .loginBtn, html .first-section .loginBtn {
+      position: absolute;
+      right: 8vw;
+      top: 8vh;
+      width: auto;
+      height: auto; }
+      body .first-section .loginBtn a, html .first-section .loginBtn a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: #c2a162;
+        text-decoration: none;
+        font-size: 25px;
+        font-family: 'Comfortaa',bold; }
+    body .first-section .createRequestBar, html .first-section .createRequestBar {
+      width: 80vw;
+      height: 40vh; }
+      body .first-section .createRequestBar .first-dropdown, html .first-section .createRequestBar .first-dropdown {
+        position: relative;
+        left: 25vw !important;
+        top: 30% !important;
+        animation-duration: 2s;
+        animation-fill-mode: forwards; }
+        body .first-section .createRequestBar .first-dropdown .btn, html .first-section .createRequestBar .first-dropdown .btn {
+          font-size: 27px !important;
+          height: 15vh !important;
+          width: 30vw !important;
+          animation-duration: 2s;
+          animation-fill-mode: forwards; }
+          body .first-section .createRequestBar .first-dropdown .btn .pre-image, html .first-section .createRequestBar .first-dropdown .btn .pre-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 20.335%;
+            background-size: 45% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 4; }
+      body .first-section .createRequestBar .second-dropdown, body .first-section .createRequestBar .third-dropdown, html .first-section .createRequestBar .second-dropdown, html .first-section .createRequestBar .third-dropdown {
+        transition: all ease-in-out 0.5s; }
+      body .first-section .createRequestBar .second-dropdown, html .first-section .createRequestBar .second-dropdown {
+        transition-delay: 1.5s; }
+      body .first-section .createRequestBar .second-dropdown.ng-hide, body .first-section .createRequestBar .third-dropdown.ng-hide, html .first-section .createRequestBar .second-dropdown.ng-hide, html .first-section .createRequestBar .third-dropdown.ng-hide {
+        opacity: 0;
+        top: 100%;
+        left: 0; }
+      body .first-section .createRequestBar .animated-first-dropdown, html .first-section .createRequestBar .animated-first-dropdown {
+        animation-name: firstDropdownAnimation; }
+      body .first-section .createRequestBar .animated-btn, html .first-section .createRequestBar .animated-btn {
+        animation-name: forBtn; }
+      body .first-section .createRequestBar .dropdown, html .first-section .createRequestBar .dropdown {
+        display: inline-block;
+        top: 30%;
+        margin-left: 2vw; }
+        body .first-section .createRequestBar .dropdown:before, html .first-section .createRequestBar .dropdown:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 20.335%;
+          background-color: rgba(6, 5, 5, 0.2); }
+        body .first-section .createRequestBar .dropdown .selectedBackground, html .first-section .createRequestBar .dropdown .selectedBackground {
+          background-color: rgba(5, 39, 35, 0.25) !important; }
+        body .first-section .createRequestBar .dropdown .dropdown-menu, html .first-section .createRequestBar .dropdown .dropdown-menu {
+          width: 100%;
+          text-align: right;
+          border-radius: 0;
+          padding: 0;
+          border: 0;
+          background-color: transparent; }
+          body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item {
+            background-color: rgba(104, 104, 104, 0.5);
+            color: white;
+            height: 8vh;
+            padding: 0 !important;
+            margin-top: 5px;
+            padding-right: 5px !important;
+            font-size: 21px;
+            line-height: 8vh; }
+            body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item .pre-index, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item .pre-index {
+              height: 100%;
+              width: 18%;
+              position: relative;
+              float: left;
+              left: -18%;
+              text-align: center; }
+            body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item .pre-image, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item .pre-image {
+              height: 100%;
+              width: 18%;
+              position: relative;
+              top: -100%;
+              background-size: 45% auto;
+              background-position: center center;
+              background-repeat: no-repeat;
+              z-index: 4; }
+            body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item:hover, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item:hover {
+              background-color: rgba(5, 39, 35, 0.2); }
+            body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item:before, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item:before {
+              content: '';
+              float: left;
+              display: inline-block;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 18%;
+              background-color: rgba(6, 5, 5, 0.2); }
+        body .first-section .createRequestBar .dropdown .btn, html .first-section .createRequestBar .dropdown .btn {
+          font-size: 21px;
+          height: 10vh;
+          width: 22vw;
+          font-family: 'Comfortaa',bold;
+          border-radius: 0;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          -webkit-appearance: initial; }
+          body .first-section .createRequestBar .dropdown .btn .pre-image, html .first-section .createRequestBar .dropdown .btn .pre-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 20.335%;
+            background-size: 45% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 4; }
+          body .first-section .createRequestBar .dropdown .btn:active, html .first-section .createRequestBar .dropdown .btn:active {
+            border-style: none; }
+          body .first-section .createRequestBar .dropdown .btn:focus, html .first-section .createRequestBar .dropdown .btn:focus {
+            outline: none; }
+        body .first-section .createRequestBar .dropdown .btn-secondary, html .first-section .createRequestBar .dropdown .btn-secondary {
+          color: white;
+          background-color: rgba(104, 104, 104, 0.5);
+          border: 0; }
+        body .first-section .createRequestBar .dropdown .dropdown-toggle:after, html .first-section .createRequestBar .dropdown .dropdown-toggle:after {
+          display: none; }
+        body .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item, html .first-section .createRequestBar .dropdown .dropdown-menu .dropdown-item {
+          font-family: 'Comfortaa',bold; }
+      body .first-section .createRequestBar .searchBtn, html .first-section .createRequestBar .searchBtn {
+        display: inline-block;
+        margin-left: 1.5vw;
+        width: 4.9vw;
+        height: 10vh;
+        background: url("../Bloom/64/search.png");
+        background-repeat: no-repeat;
+        background-size: 38.5px 38.5px;
+        position: relative;
+        background-position: center center;
+        top: 39.7%;
+        background-color: #c2a162;
+        border: 0; }
+        body .first-section .createRequestBar .searchBtn:active, body .first-section .createRequestBar .searchBtn:focus, html .first-section .createRequestBar .searchBtn:active, html .first-section .createRequestBar .searchBtn:focus {
+          outline: none; }
+      body .first-section .createRequestBar .searchDisabled, html .first-section .createRequestBar .searchDisabled {
+        background-color: #686868; }
+    body .first-section .bottomAnimationDiv, html .first-section .bottomAnimationDiv {
+      position: absolute;
+      bottom: 20px;
+      width: 30px;
+      height: 60px;
+      margin-left: auto;
+      margin-right: auto; }
+
+@keyframes downUpAnimation {
+  0% {
+    top: 16%; }
+  50% {
+    top: 68%; }
+  100% {
+    top: 16%; } }
+@keyframes firstDropdownAnimation {
+  to {
+    left: 0;
+    top: 30%; } }
+@keyframes forBtn {
+  to {
+    font-size: 21px;
+    height: 10vh;
+    width: 22vw; } }
+
+/*# sourceMappingURL=style.css.map */

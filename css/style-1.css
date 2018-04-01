@@ -1,0 +1,97 @@
+.main {
+	margin: 0;
+	background-image: url('../Bloom/backGround.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	width: 100vw;
+	height: 100vh;
+}	
+main {
+	height: 85vh;
+}
+footer {
+	height: 15vh;
+}
+
+.bloom-logo{
+	width: 112px;
+	height: 128px;
+	background-size: cover;
+	z-index: 20;
+
+}
+.bloom-logo-yellow{
+	background: transparent url(../Bloom/logoYellow.png);
+}
+
+.bloom-login,
+.bloom-login:hover,
+.bloom-login:active,
+.bloom-login:focus,
+.bloom-login:link{
+	color: #C2A162;
+	text-decoration: none;
+	font-size: 28px;
+	font-family: 'Comfortaa', bold;
+	right:50px;
+	z-index: 20;
+}
+
+.header-1{
+	padding: 10px 50px;
+	height: 150px;
+}
+
+.words{
+	width:60%;
+	color: #FFFFFF;
+	font-size:42px !important;
+	margin-top: -100px;
+}
+
+.quote{
+	color: #FFFFFF;
+	font-size:42px !important;;
+	font-family: 'Comfortaa', bold;
+}
+.author{
+	color: #C2A162;
+	font-size: 32px;/*
+	margin-left: 450px;*/
+	font-family: 'Comfortaa', bold;
+	z-index: 20;
+}
+
+@media only screen and (max-device-width:480px){
+	html, body {
+		overflow-x: hidden;
+	}
+	.quote{
+		margin-top: -100px;
+		font-size: 38px !important;
+	}
+	.header-1 {
+		height: 15vh;
+		padding: 0;
+	}
+	.header-2 {
+		position: absolute;
+		height: 15vh!important;
+		padding: 0!important;
+	}
+	.author{
+		font-size: 40px;
+	}
+	.bloom-login{
+		font-size: 35px;
+		margin-right: 35px;
+	}
+	.bloom-logo{
+		margin-left: 35px;
+		flex-basis: 25%;
+		max-width: 17%;
+		height: 11vh;
+		background-size: cover;
+	}
+}

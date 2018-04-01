@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/newStyle.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="bower_components/pagePiling.js/dist/jquery.pagepiling.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel = "stylesheet" type = "text/css" href = "css/style-1.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "css/style-2.css"/>
+	<style>
+		[ng\:cloak],[ng-cloak],.ng-cloak {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="pagepiling">
+		<div class="section first-section">
+			<div class="container d-flex flex-column" ng-app="myApp" ng-controller="myCtrl">
+				<div class="row justify-content-between top-row">
+					<div class="logo col-2"></div>
+					<div class="loginBtn col-2">
+						<a href="#">ВОЙТИ</a>
+					</div>
+				</div>
+				<div class="row request-row d-flex justify-content-around" ng-init="selectedService1 = {name: 'Выберите услугу',image:'Bloom/64/downBtn.png'}; selectedService2 = 'Выберите услугу'; selectedService3 = 'Выберите услугу'" ng-cloak>
+					
+					<div class="dropdowns justify-content-between d-flex">					
+						<div class="dropdown first-dropdown my-dropdown" ng-class="{'animated-first-dropdown' : firstSelected}">
+							<button class="btn btn-secondary dropdown-toggle" ng-class="{selectedBackground : firstSelected, 'animated-btn' : firstSelected}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<div class="pre-image" style="background-image:url({{selectedService1.image}})"></div>
+					    		{{selectedService1.name}}
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#" ng-repeat="item in mainServices" ng-click="itemClicked(mainServices.indexOf(item))">
+							    	{{item.name}}
+								  	<div class="pre-image" style="background-image:url({{item.image}})"></div>
+							    </a>
+							</div>
+						</div>
+						
+						<div class="dropdown second-dropdown my-dropdown" ng-style="{'transition' : firstSelected ? 'all ease-in-out 1s' : '0s','visibility' : firstSelected ? 'visible' : 'hidden', 'bottom' : firstSelected ? '0' : '-100px', 'opacity' : firstSelected ? '1' : '0'}">
+							<button class="btn btn-secondary dropdown-toggle" ng-class="{selectedBackground : secondSelected}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<div class="pre-image" style="background-image:url(Bloom/64/downBtn.png)"></div>
+					    		{{selectedService2}}
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#" ng-repeat="item in secondList" ng-click="itemClicked2(item)">
+							    	<span class="pre-index">{{secondList.indexOf(item) + 1}}</span>
+							    	{{item.name}}
+							    </a>
+							</div>
+						</div>
+						
+						<div class="dropdown third-dropdown my-dropdown" ng-style="{'transition' : firstSelected ? 'all ease-in-out 1s' : '0s','visibility' : secondSelected ? 'visible' : 'hidden', 'bottom' : secondSelected ? '0' : '-100px', 'opacity' : secondSelected ? '1' : '0'}">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-class="{selectedBackground : selectedService3 != 'Выберите услугу'}" >
+								<div class="pre-image" style="background-image:url(Bloom/64/downBtn.png)"></div>
+					    		{{selectedService3}}
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#" ng-repeat="item in tertiaryList" ng-click="itemClicked3(item)">
+							    	<span class="pre-index">{{tertiaryList.indexOf(item) + 1}}</span>
+							    	{{item}}
+							    </a>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn search-btn" ng-style="{'visibility' : secondSelected ? 'visible' : 'hidden', 'display' : firstSelected ? 'static' : 'none'}" ng-click="sendRequest()" ng-class="{searchDisabled:selectedService3 == 'Выберите услугу'}" ng-disabled="selectedService3 == 'Выберите услугу'">
+						
+					</button>
+				</div>
+				<div class="row bottom-row d-flex justify-content-center" ng-class="{'hideGif' : secondSelected}">
+					<div class="slider-gif">
+						There will be GIF
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "section" id = "section1">			
+	        <div class="main container-fluid">
+				<header class="row d-flex justify-content-between align-items-center header-1">
+						<div class="bloom-logo bloom-logo-yellow"></div>
+						<p class="bloom-login">Войти</p>
+				</header>
+				<main class="row d-flex align-items-center justify-content-center">
+					<div class="justify-content-center words text-center">
+						<label class="quote">"У женщины есть только однa возможность быть красивой, но быть привлекательной есть сто тысяч возможностей."</label>	
+						<div class="col-md-12 d-flex justify-content-end">
+							<label class="author">Монтескью</label>
+						</div>	
+					</div>	 		
+				</main>
+				<a href="#page2"><div class="mouse" data-menuanchor = "page2"></div></a>	
+			</div>			
+	     </div>
+			
+	     <div class = "section" id = "section2">			
+			<div class="section-local">
+				<header class="d-flex justify-content-between align-items-center header-2">
+						<div class="bloom-logo bloom-logo-green"></div>
+						<p class="bloom-login">Войти</p>
+				</header>
+				<main class="row main-top" >
+					<div class="d-flex col-md-6 col-sm-12 part first-part justify-content-center">
+						<p class="d-flex align-self-center text">Уход за волосами</p>
+					</div>
+					<div class="col-md-6 col-sm-12 part second-part d-flex justify-content-center">
+						<p class="d-flex align-self-center text">Уход за ногтями</p></div>
+					<div class="col-md-6 col-sm-12 part third-part d-flex justify-content-center">
+						<p class="d-flex align-self-center text">Макияж</p></div>
+					<div class="col-md-6 col-sm-12 part fourth-part d-flex justify-content-center">
+						<p class="d-flex align-self-center text">Уход за телом</p></div>
+					<a href="#page1"><div class="mouse" data-menuanchor = "page1"></div></a>
+				</main>
+				<div class="overlay overlay-1"></div>
+				<div class="overlay overlay-2"></div>
+			</div>
+	     </div>
+	</div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.8/angular-animate.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.8/angular-route.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="bower_components/pagePiling.js/dist/jquery.pagepiling.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

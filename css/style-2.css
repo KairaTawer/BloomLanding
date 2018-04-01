@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic');
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	font-family: 'Comfortaa', cursive;
+}
+
+.section-local {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.section-local .row {
+	height: 100%;
+	margin: 0;
+}
+
+.header-2{
+	position: absolute;
+	padding: 10px 50px;
+	height: 150px;
+	width: 100%;
+}
+.bloom-logo-green{
+	background-image: url('../Bloom/logoGreen.png');
+}
+.main-top{
+	/*because our header(.header-2) have 150px, which moved main div*/
+}
+.part {
+	height: 50%;
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(0,0,0,.5);
+
+}
+
+.first-part{
+	background-image: url('../Bloom/Hair.png');
+	position: relative;
+}
+.second-part{
+	background-image: url('../Bloom/Nails.png');
+}
+.third-part{
+	background-image: url('../Bloom/Makeup.png');
+}
+.fourth-part{
+	background-image: url('../Bloom/Bodycare.png');
+}
+
+.text{
+	color: #EFEFEF;
+	font-size: 42px;
+	z-index: 20;
+	margin-top: 50px;
+}
+
+.overlay{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.5;
+	z-index: 3;
+}
+.overlay-1{
+	background-color: #4F3401;
+}
+.overlay-2{
+	background-color: #000;
+}
+
+.mouse{
+	left: calc(100%/2 - 40px/2);
+	position: absolute;
+	width: 40px;
+	height: 66px;
+	background-image: url(../Bloom/scrollDown.png);
+	z-index: 20;
+	bottom: 10px;
+	background-size: cover;
+}
+
+
+@media screen and (max-width: 480px) {
+	header{
+		height: 10vh;
+	}
+	main{
+		height: 90vh;
+	}
+	.header-2 {
+		height: 15vh!important;
+		padding: 0!important;
+	}
+	.part{
+		height: 25%;
+	}
+	.text{
+		font-size: 25px;
+		margin-top: 50px;
+	}
+	
+}

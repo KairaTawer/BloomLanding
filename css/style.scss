@@ -1,0 +1,245 @@
+body,html {
+	padding: 0;
+	margin: 0;
+	.first-section {
+		background: url('../Bloom/backGround.png') no-repeat center center;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.logo {
+			position: absolute;
+			background: url('../Bloom/128/logoYellow.png') no-repeat center center;
+			background-size: cover;
+			top: 8vh;
+			left: 8vw;
+			width: 5vw;
+			height: 11.5vh;
+		}
+		.loginBtn {
+			position: absolute;
+			right: 8vw;
+			top: 8vh;
+			width: auto;
+			height: auto;
+			a {
+				display: block;
+				width: auto;
+				height: auto;
+				color: #c2a162;
+				text-decoration: none;
+				font-size: 25px;
+				font-family: 'Comfortaa',bold;
+			}
+		}
+		.createRequestBar {
+			width: 80vw;
+			height: 40vh;
+			.first-dropdown {
+				position: relative;
+				left: 25vw!important;
+				top: 30%!important;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				.btn {
+					font-size: 27px!important;
+					height: 15vh!important;
+					width: 30vw!important;
+					animation-duration: 2s;
+					animation-fill-mode: forwards;
+					.pre-image {
+						position: absolute;
+						top: 0;left: 0;right: 0;bottom: 0;
+						height: 100%;
+						width: 20.335%;
+						background-size: 45% auto;
+						background-position: center center;
+						background-repeat: no-repeat;
+						z-index: 4;
+					}
+				}
+			}
+			.second-dropdown,.third-dropdown {
+				transition: all ease-in-out 0.5s;
+			}
+			.second-dropdown {
+				transition-delay: 1.5s;
+			}
+			.second-dropdown.ng-hide,.third-dropdown.ng-hide {
+				opacity: 0;
+				top: 100%;
+				left: 0;
+			}
+			.animated-first-dropdown {
+				animation-name: firstDropdownAnimation;
+			}
+			.animated-btn {
+				animation-name: forBtn;
+			}
+			.dropdown {
+				display: inline-block;
+				top: 30%;
+				margin-left: 2vw;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 20.335%;
+					background-color: rgba(6,5,5,.2);
+				}
+				.selectedBackground {
+					background-color: rgba(5,39,35,.25)!important;
+				}
+				.dropdown-menu {
+					width: 100%;
+					text-align: right;
+					border-radius: 0;
+					padding: 0;
+					border: 0;
+					background-color: transparent;
+					.dropdown-item {
+					    background-color: rgba(104,104,104,0.5);
+					    color: white;
+					    height: 8vh;
+					    padding: 0!important;
+					    margin-top: 5px;
+					    padding-right: 5px!important;
+						font-size: 21px;
+						line-height: 8vh;
+						.pre-index {
+							height: 100%;
+							width: 18%;
+							position: relative;
+							float: left;
+							left: -18%;
+							text-align: center;
+						}
+						.pre-image {
+							height: 100%;
+							width: 18%;
+							position: relative;
+							top: -100%;
+							background-size: 45% auto;
+							background-position: center center;
+							background-repeat: no-repeat;
+							z-index: 4;
+						}
+						&:hover {
+							background-color: rgba(5,39,35,.2);
+						}
+						&:before {
+							content: '';
+							float: left;
+							display: inline-block;
+							top: 0;
+							left: 0;
+							height: 100%;
+							width: 18%;
+							background-color: rgba(6,5,5,.2);
+						}
+					}
+				}
+				.btn {
+					font-size: 21px;
+					height: 10vh;
+					width: 22vw;
+					font-family: 'Comfortaa',bold;
+					border-radius: 0;
+					margin: 0;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					-webkit-appearance: initial;
+					.pre-image {
+						position: absolute;
+						top: 0;left: 0;right: 0;bottom: 0;
+						height: 100%;
+						width: 20.335%;
+						background-size: 45% auto;
+						background-position: center center;
+						background-repeat: no-repeat;
+						z-index: 4;
+					}
+					&:active {
+						border-style: none;
+					}
+					&:focus {
+						outline: none;
+					}
+				}
+				.btn-secondary {
+					color: white;
+					background-color: rgba(104,104,104,0.5);
+					border: 0;
+				}
+				.dropdown-toggle {
+					&:after {
+						display: none;
+					}
+				}
+				.dropdown-menu {
+					.dropdown-item {
+						font-family: 'Comfortaa',bold;
+					}
+				}
+			}
+			.searchBtn {
+				display: inline-block;
+				margin-left: 1.5vw;
+				width: 4.9vw;
+				height: 10vh;
+				background: url('../Bloom/64/search.png');
+				background-repeat: no-repeat;
+				background-size: 38.5px 38.5px;
+				position: relative;
+				background-position: center center;
+				top: 39.7%;
+				background-color: #c2a162;
+				border: 0;
+				&:active, &:focus {
+					outline:none;
+				}
+			}
+			.searchDisabled {
+				background-color: #686868;
+			}
+		}
+		.bottomAnimationDiv {
+			position: absolute;
+			bottom: 20px;
+			width: 30px;
+			height: 60px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+@keyframes downUpAnimation {
+	0% {
+		top: 16%;
+	}
+	50% {
+		top: 68%;
+	}
+	100% {
+		top: 16%;
+	}
+}
+
+@keyframes firstDropdownAnimation {
+	to {
+		left: 0;
+		top: 30%;
+	}
+}
+
+@keyframes forBtn {
+	to {
+		font-size: 21px;
+		height: 10vh;
+		width: 22vw;
+	}
+}

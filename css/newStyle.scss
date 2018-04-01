@@ -1,0 +1,313 @@
+body,html {
+	padding: 0;margin: 0;
+	.first-section {
+		background: url('../Bloom/backGround.png') no-repeat center center;
+		background-size: cover;
+		.container {
+			height: 100%;
+			width: 90%;
+			.top-row {
+				margin-top: 6vh;
+				display: flex;
+				align-items: center;
+				.logo {
+					background: url('../Bloom/128/logoYellow.png') no-repeat center center;
+					background-size: 112px 128px;
+					height: 20vh;
+				}
+				.loginBtn {
+					width: auto;
+					height: auto;
+					text-align: right;
+					a {
+						color: #c2a162;
+						text-decoration: none;
+						font-size: 28px;
+						font-family: 'Comfortaa',bold;
+					}
+				}
+			}
+			.request-row {
+				margin-top: 15vh;
+				.dropdowns {
+					width: 85%;
+					.first-dropdown {
+						position: relative;
+						left: 25vw!important;
+						top: 30%!important;
+						animation-duration: 2s;
+						animation-fill-mode: forwards;
+						width: 30vw!important;
+						.btn {
+							font-size: 27px!important;
+							height: 15vh!important;
+							width: 100%;
+							animation-duration: 2s;
+							animation-fill-mode: forwards;
+							.pre-image {
+								position: absolute;
+								top: 0;left: 0;right: 0;bottom: 0;
+								height: 100%;
+								width: 20.335%;
+								background-size: 45% auto;
+								background-position: center center;
+								background-repeat: no-repeat;
+								z-index: 4;
+							}
+						}
+					}
+					.my-dropdown {
+						padding: 0;
+						display: inline-block;
+						width: 32%;
+						.btn {
+							font-family: 'Comfortaa',bold!important;
+							width: 100%;
+							height: 100%;
+							font-size: 18px;
+							border-radius: 0;
+							-webkit-appearance: none;
+							color: white;
+							background-color: rgba(104,104,104,0.5);
+							border: 0;
+							display: flex;
+							align-items: center;
+							justify-content: flex-end;
+							.pre-image {
+								position: absolute;
+								top: 0;left: 0;right: 0;bottom: 0;
+								height: 100%;
+								width: 20%;
+								background-size: 45% auto;
+								background-position: center center;
+								background-repeat: no-repeat;
+								z-index: 4;
+							}
+						}
+						.dropdown-menu {
+							font-family: 'Comfortaa',bold;
+						    width: 100%;
+							text-align: right;
+							border-radius: 0;
+							padding: 0;
+							border: 0;
+							background-color: transparent;
+							.dropdown-item {
+								background-color: rgba(104,104,104,0.5);
+						    	color: white;
+						    	height: 8vh;
+							    padding: 0!important;
+							    margin-top: 5px;
+							    padding-right: 5px!important;
+								font-size: 18px;
+								line-height: 8vh;
+								.pre-index {
+									height: 100%;
+									width: 20%;
+									position: relative;
+									float: left;
+									left: -20%;
+									text-align: center;
+								}
+								.pre-image {
+									height: 100%;
+									width: 20%;
+									position: relative;
+									top: -100%;
+									background-size: 45% auto;
+									background-position: center center;
+									background-repeat: no-repeat;
+									z-index: 4;
+								}
+								&:hover {
+									background-color: rgba(5,39,35,.2);
+								}
+								&:before {
+									content: '';
+									float: left;
+									display: inline-block;
+									top: 0;
+									left: 0;
+									height: 100%;
+									width: 20%;
+									background-color: rgba(6,5,5,.2);
+								}
+							}
+						}
+						.dropdown-toggle {
+							&:after {
+								display: none;
+							}
+						}
+						.selectedBackground {
+							background-color: rgba(5,39,35,.25)!important;
+						}
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 100%;
+							width: 20%;
+							background-color: rgba(6,5,5,.3);
+						}
+						.btn-secondary {
+							&:focus {
+								box-shadow: none!important;
+							}
+						}
+					}
+					.second-dropdown {
+						transition-delay: 1.5s;
+					}
+					.animated-first-dropdown {
+						animation-name: firstDropdownAnimation;
+					}
+					.animated-btn {
+						animation-name: forBtn;
+					}
+				}
+				.search-btn {
+					display: inline-block;
+					width: 6%;
+					height: 10vh;
+					background: url('../Bloom/64/search.png') no-repeat center center;
+					background-size: 38.5px 38.5px;
+					background-color: #c2a162;
+					border-radius: 0;
+					border: 0;
+					&:active, &:focus {
+						outline:none;
+						box-shadow: none;
+					}
+				}
+				.searchDisabled {
+					background-color: #686868;
+				}
+			}
+			.bottom-row {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				.slider-gif {
+					color: white;
+				}
+			}
+			.hideGif {
+				display: flex;
+			}
+		}
+	}
+}
+
+@media only screen and (max-device-width:480px){
+	body,html {
+		.first-section {
+			.container {
+				width: 100%;
+				.top-row {
+					height: 15vh;
+					margin-top: 0;
+					.logo {
+						background-size: cover;
+						flex-basis: 25%;
+						max-width: 17%;
+						margin-left: 35px;
+						height: 11vh;
+					}
+					.loginBtn {
+						margin-right: 35px;
+						a {
+							font-size: 35px;
+						}
+					}
+				}
+				.request-row {
+					margin-top: 0;
+					align-items: center;
+					.dropdowns {
+						display: flex;
+						flex-direction: column;
+						width: 90%;
+						margin-top: 10vh;
+						.my-dropdown {
+							display: block;
+							width: 100%;
+							height: 100%;
+							margin-top: 50px;
+							.btn {
+								height: 12vh!important;
+								font-size: 60px;
+							}
+							.dropdown-menu {
+								.dropdown-item {
+									font-size: 60px!important;
+								}
+							}
+						}
+						.first-dropdown {
+							left: 0!important;
+							top: 30%!important;
+							width: 100% !important;
+							.btn {
+								font-size: 60px!important;
+								width: 100%!important;
+							}
+						}
+						.animated-btn {
+							animation-name: none;
+						}
+						.second-dropdown {
+							transition-delay: 0s;
+						}
+						.animated-first-dropdown {
+							animation-name: firstDropdownAnimation1;
+						}
+					}
+					.search-btn {
+						display: block;
+						width: 20%;
+						background-size: 75px 75px;
+						position: absolute;
+						bottom: 5vh;
+					}
+				}
+				.bottom-row {
+				}
+				.bottom-row.hideGif {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+@keyframes firstDropdownAnimation {
+	from {
+		width: 30vw!important;
+		left: 50%;
+		top: -40%;
+	}
+	to {
+		width: 32%;
+		left: 0;
+		top: 0;
+	}
+}
+
+@keyframes firstDropdownAnimation1 {
+	from {
+		top: 40%;
+	}
+	to {
+		left: 0;
+		top: 0;
+	}
+}
+
+@keyframes forBtn {
+	to {
+		font-size: 21px;
+		height: 10vh;
+	}
+}
